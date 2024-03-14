@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+python-multipart
+git+https://github.com/joefutrelle/pyifcb@ml_analyzed_2023
