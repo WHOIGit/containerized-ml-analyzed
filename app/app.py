@@ -16,6 +16,7 @@ def compute_ml_analyzed(adc_path):
     if np.isnan(ml_analyzed):
         ml_analyzed = None
     return {
+        'bin': b.lid,
         'ml_analyzed': ml_analyzed,
     }
 
@@ -33,7 +34,4 @@ async def ml_analyzed_endpoint(adc_file: UploadFile = File(...)):
 
             return JSONResponse(content=result)
     except Exception as e:
-        # print traceback to stdout
-        import traceback
-        traceback.print_exc()
         return JSONResponse(content={'error': str(e)}, status_code=500)
