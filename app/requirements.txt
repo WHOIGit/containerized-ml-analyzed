@@ -1,4 +1,5 @@
 fastapi
 uvicorn
 python-multipart
+aiofiles
 git+https://github.com/joefutrelle/pyifcb@ml_analyzed_2023
